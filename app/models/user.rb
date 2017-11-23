@@ -5,5 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :team_members, dependent: :destroy
+  has_many :teamings
+
+  validates :name, presence: true
+
 
 end
